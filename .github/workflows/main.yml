@@ -3,7 +3,7 @@ name: WORKFLOW
 on:
   push:
     branches:
-      - main # Set a branch to deploy when pushed
+      - master # Set a branch to deploy when pushed
 
 jobs:
   deploy:
