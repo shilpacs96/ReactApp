@@ -12,6 +12,11 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: commit linting check
+        uses: uptownaravi/verify-commit-message-action@v2
+        with:
+          regex: '^(?=.{0,72}$)(vim-patch.*|(ci|fix|feat|docs|test|perf|refactor|chore|build)(\([^)]+\))?!?:\s[a-z].*[^.]$)'
+
       - name: Install
         run: npm install
       
